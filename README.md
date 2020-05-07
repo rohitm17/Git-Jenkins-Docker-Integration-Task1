@@ -39,9 +39,15 @@ cat >> .git/hooks/post-commit
 #!/bin/bash
 git push
 
+![git](https://github.com/rohitm17/LW-HomeWork/blob/master/Screenshots/git.png)
+![github](https://github.com/rohitm17/LW-HomeWork/blob/master/Screenshots/github.png)
 JOB1:dev-job
+![img1](https://github.com/rohitm17/LW-HomeWork/blob/master/Screenshots/Screenshot_2020-05-07%20dev-job%20Config%20%5BJenkins%5D.png)
 JOB2: master-job
+![img2](https://github.com/rohitm17/LW-HomeWork/blob/master/Screenshots/Screenshot_2020-05-07%20master-job%20Config%20%5BJenkins%5D.png)
 JOB3: merge-job
+![img3](https://github.com/rohitm17/LW-HomeWork/blob/master/Screenshots/Screenshot_2020-05-07%20merge-job%20Config%20%5BJenkins%5D.png)
+
 
 
 
