@@ -23,12 +23,13 @@ Tools and Technologyies used:
 5. Base OS:Windows 10
 
 <H3>First setup environment in RHEL-8 </H3>
+<pre>
 # setenforce 0
 # systemctl stop firewalld
 # systemctl start docker
 # systemctl start httpd
 # systemctl start jenkins
-
+<pre>
 Docker image required : Httpd
 Docker containers required: 
 1. devoshw : for testing purpose used by dev branch
