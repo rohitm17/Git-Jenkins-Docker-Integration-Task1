@@ -23,13 +23,40 @@ Tools and Technologyies used:
 5. Base OS:Windows 10
 
 <H3>First setup environment in RHEL-8 </H3>
+
+Configure the yum:
+<pre>
+#cd /etc/yum.repos.d/
+#cat >> rohit.repo
+
+[dvd1]
+baseurl=file:///run/media/root/RHEL-8–0–0-BaseOS-x86_64/AppStream
+gpgcheck=0
+[dvd2]
+baseurl=file:///run/media/root/RHEL-8–0–0-BaseOS-x86_64/BaseOS
+gpgcheck=0
+
+#cat >> docker.repo
+
+[docker]
+baseurl= https://download.docker.com/linux/centos/7/x86_64/stable/
+gpgcheck=0
+
+#cat >> jenkins.repo
+
+[jenkins]
+name=Jenkins-stable
+baseurl=http://pkg.jenkins.io/redhat-stable
+gpgcheck=0
+
+</pre>
 <pre>
 # setenforce 0
 # systemctl stop firewalld
 # systemctl start docker
 # systemctl start httpd
 # systemctl start jenkins
-<pre>
+</pre>
 Docker image required : Httpd
 Docker containers required: 
 1. devoshw : for testing purpose used by dev branch
@@ -41,11 +68,19 @@ cat >> .git/hooks/post-commit
 git push
 
 ![git](https://github.com/rohitm17/LW-HomeWork/blob/master/Screenshots/git.png)
+
+
 ![github](https://github.com/rohitm17/LW-HomeWork/blob/master/Screenshots/github.png)
+
+
 JOB1:dev-job
 ![img1](https://github.com/rohitm17/LW-HomeWork/blob/master/Screenshots/Screenshot_2020-05-07%20dev-job%20Config%20%5BJenkins%5D.png)
+
+
 JOB2: master-job
 ![img2](https://github.com/rohitm17/LW-HomeWork/blob/master/Screenshots/Screenshot_2020-05-07%20master-job%20Config%20%5BJenkins%5D.png)
+
+
 JOB3: merge-job
 ![img3](https://github.com/rohitm17/LW-HomeWork/blob/master/Screenshots/Screenshot_2020-05-07%20merge-job%20Config%20%5BJenkins%5D.png)
 
